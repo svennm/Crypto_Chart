@@ -10,7 +10,6 @@ d4= dt.datetime(2021,2,15)
 d5= dt.datetime(2021,3,1)
 d6= dt.datetime(2021,3,15)
 
-
 date_arr = np.array([d1,d2,d3,d4,d5,d6])
 crypto_arr = np.array(['LINK','ETH','XRP','ADA'])
 eth = np.array([ETH])
@@ -26,11 +25,3 @@ price_4 = cc.get_historical_price('ADA', 'USD',dt.datetime(2021,1,1),'Kraken')
 print(price_4['ADA']['USD'])
 
 link_arr = np.array([])
-
-
-
-
-
-
-
-
