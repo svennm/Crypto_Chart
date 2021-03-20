@@ -1,5 +1,6 @@
 import numpy as np
 import cryptocompare as cc
+import yfinance as yfin
 import matplotlib
 import datetime as dt
 
@@ -11,7 +12,6 @@ d3= dt.datetime(2021,2,1)
 d4= dt.datetime(2021,2,15)
 d5= dt.datetime(2021,3,1)
 d6= dt.datetime(2021,3,15)
-
 
 date_arr = np.array([d1,d2,d3,d4,d5,d6])
 crypto_arr = np.array(['LINK','ETH','XRP','ADA'])
@@ -87,18 +87,3 @@ print(link_arr)
 print(eth_arr)
 print(xrp_arr)
 print(ada_arr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
