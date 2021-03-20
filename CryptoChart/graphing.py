@@ -85,7 +85,7 @@ def figcompare(assets_array, figure_title =  "The prices over time:\n", yaxistit
 	plt.show()
 
 def graphcompare(assets_array, figure_title =  "The prices over time:\n", yaxistitle = 'Price (USD)', xaxistitle = 'Time (months)'):
-	"""Compares multiple assets in multiple price over time graph. (Parameter: Expects a Matrix)"""
+	"""Compares multiple assets in one price over time graph. (Parameter: Expects a Matrix)"""
 	number_of_assets = len(assets_array[0])
 
 	#Dynamically creates the title and adds in all the assets to it
@@ -113,6 +113,8 @@ def graphcompare(assets_array, figure_title =  "The prices over time:\n", yaxist
 	plt.legend(loc=2)
 	plt.show()
 
+
+""" Testing code delete after use 
 x = [3,4,4,5,5,5,9,5,5,9,6,6,6,6]
 x2 = np.cos(x)
 x3 = np.arctan(x)
@@ -142,3 +144,4 @@ assets_array3 = [ names , xs, ys]
 #subcompare(assets_array3)
 #figcompare(assets_array)
 graphcompare(assets_array3)
+"""
