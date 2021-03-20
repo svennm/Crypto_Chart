@@ -84,12 +84,43 @@ def figcompare(assets_array, figure_title =  "The prices over time:\n", yaxistit
 	#displays the plot
 	plt.show()
 
+def graphcompare(assets_array, figure_title =  "The prices over time:\n", yaxistitle = 'Price (USD)', xaxistitle = 'Time (months)'):
+	"""Compares multiple assets in multiple price over time graph. (Parameter: Expects a Matrix)"""
+	number_of_assets = len(assets_array[0])
+
+	#Dynamically creates the title and adds in all the assets to it
+	title_array = [figure_title]
+	for assets_name in assets_array[0]:
+		title_array.append(assets_name)
+	title = pd.Series(title_array)
+	title = title.str.cat(sep=" ")
+
+	#creates new transparent figure and inputs the title
+	fig = plt.figure(title)
+	fig.patch.set_alpha(0.0)
+	ax = plt.axes()
+	ax.patch.set_alpha(0.0)
+	
+	plt.title(title)
+	plt.ylabel(yaxistitle)
+	plt.xlabel(xaxistitle)
+	
+	for i in range(number_of_assets):
+		asset_name = assets_array[0][i]
+		plt.plot(assets_array[1][i], assets_array[2][i], label = asset_name)
+
+	#displays the plot
+	plt.legend(loc=2)
+	plt.show()
+
 x = [3,4,4,5,5,5,9,5,5,9,6,6,6,6]
 x2 = np.cos(x)
 x3 = np.arctan(x)
+x4 = [3,4,4,5,6,5,9,5,9,9,6,6,6,6]
 y = np.sin(x)
 y2 = np.tan(x)
-y3 = np.arcsin(x)
+y3 = np.sin(x)
+y4 = [3,4,9,5,2,5,9,5,5,9,8,6,1,6]
 
 xs = [x, x2, x]
 ys = [y, y2, y]
@@ -101,12 +132,13 @@ xs2 = [x,x2]
 ys2 = [y,y2]
 assets_array2 = [names2 , xs2 , ys2]
 
-xs = [x, x2, x, x2]
-ys = [y, y2, y, y2]
+xs = [x, x2, x3, x4]
+ys = [y, y2, y3, y4]
 names = ["BTC" , "ETC", "USD", "USD_COIN"]
 assets_array3 = [ names , xs, ys]
 
-graph( x, y)
+#graph( x, y)
 #subcompare(assets_array2)
 #subcompare(assets_array3)
 #figcompare(assets_array)
+graphcompare(assets_array3)
