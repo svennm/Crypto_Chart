@@ -1,5 +1,6 @@
 import numpy as np
 import cryptocompare as cc
+import yfinance as yfin
 import matplotlib
 import datetime as dt
 
