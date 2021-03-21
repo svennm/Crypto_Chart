@@ -114,7 +114,7 @@ def graphcompare(assets_array, figure_title =  "The prices over time:\n", yaxist
 	plt.show()
 
 
-""" Testing code delete after use 
+""" # Testing code delete after use 
 x = [3,4,4,5,5,5,9,5,5,9,6,6,6,6]
 x2 = np.cos(x)
 x3 = np.arctan(x)
@@ -139,9 +139,9 @@ ys = [y, y2, y3, y4]
 names = ["BTC" , "ETC", "USD", "USD_COIN"]
 assets_array3 = [ names , xs, ys]
 
-#graph( x, y)
-#subcompare(assets_array2)
-#subcompare(assets_array3)
-#figcompare(assets_array)
+graph( x, y)
+subcompare(assets_array2)
+subcompare(assets_array3)
+figcompare(assets_array)
 graphcompare(assets_array3)
 """
