@@ -4,7 +4,8 @@ import yfinance as yfin
 import matplotlib
 import datetime as dt
 
-
+#Let users know that the program is working.. just loading the data ..
+print("loading data from API... (This might take a moment)")
 
 d1= dt.datetime(2021,1,1)
 d2= dt.datetime(2021,1,15)
@@ -82,8 +83,10 @@ usd_ada_d6 = ada_d6.get('ADA')
 
 ada_arr = np.array([usd_ada_d1,usd_ada_d2,usd_ada_d3,usd_ada_d4,usd_ada_d5,usd_ada_d6])
 
-print(date_arr)
-print(link_arr)
-print(eth_arr)
-print(xrp_arr)
-print(ada_arr)
+
+
+print("date_arr: \n" , date_arr)
+print("link_arr: \n" , link_arr)
+print("eth_arr: \n" , eth_arr)
+print("xrp_arr: \n" , xrp_arr)
+print("ada_arr: \n" , ada_arr)
